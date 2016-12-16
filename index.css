@@ -1,9 +1,9 @@
 html, body, header,
 footer, main,
 h1, h2, ul, li, a {
-  margin: 0;
-  padding: 0;
-  border: 0;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
   text-decoration: none;
   color: inherit;
   font-family: sans-serif; }
@@ -12,17 +12,21 @@ header {
   color: white;
   background-color: tomato;
   box-shadow: RGBa(200, 200, 200, 0.7) 0px 1px 4px;
+  padding: 16px 0px;
   text-align: center;
-  padding: 16px 0;
   font-size: 38px; }
 
 footer {
   color: white;
   background-color: tomato;
   box-shadow: RGBa(200, 200, 200, 0.7) 0px 1px 4px;
+  padding: 12px 0px;
   text-align: center;
-  padding: 12px 0;
-  font-size: 22px; }
+  font-size: 22px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px; }
   footer ul li {
     display: inline-block;
     margin: 0px 10px; }

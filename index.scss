@@ -1,9 +1,9 @@
 html, body, header,
 footer, main,
 h1, h2, ul, li, a {
-  margin: 0;
-  padding: 0;
-  border: 0;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
   text-decoration: none;
   color: inherit;
   font-family: sans-serif;
@@ -14,9 +14,9 @@ h1, h2, ul, li, a {
   color: white;
   background-color: tomato;
   box-shadow: RGBa(200, 200, 200, .7) 0px 1px 4px;
+
+  padding: $vertical-padding 0px;
   text-align: center;
-  padding: $vertical-padding 0;
-  // border-bottom: double;
 }
 
 header {
@@ -27,6 +27,11 @@ header {
 footer {
   @include bar(12px);
   font-size: 22px;
+
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 
   ul {
     li {
