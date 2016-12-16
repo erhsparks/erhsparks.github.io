@@ -1,32 +1,81 @@
 html, body, header,
 footer, main,
-h1, h2, ul, li, a {
+h1, ul, li, a, p {
   margin: 0px;
   padding: 0px;
   border: 0px;
   text-decoration: none;
   color: inherit;
   font-family: sans-serif;
-
+  list-style: none;
+  font-weight: 300;
 }
+
+$shadow-color: RGBa(200, 200, 200, .7);
+$large-text-shadow: $shadow-color -1px 1px;
+$bar-shadow: $shadow-color 0px 1px 4px;
 
 @mixin bar($vertical-padding) {
   color: white;
   background-color: tomato;
-  box-shadow: RGBa(200, 200, 200, .7) 0px 1px 4px;
+  box-shadow: $bar-shadow;
 
   padding: $vertical-padding 0px;
   text-align: center;
+  text-shadow: $large-text-shadow;
 }
 
 header {
   @include bar(16px);
-  font-size: 38px;
+  font-size: 40px;
+}
+
+main {
+  padding: 18px;
+
+  h1 {
+    text-shadow: $large-text-shadow;
+    color: tomato;
+    text-align: left;
+    font-size: 36px;
+  }
+
+  ul {
+    padding: 12px;
+
+    li {
+      padding: 3px;
+    }
+
+    a, p {
+      display: inline-block;
+    }
+
+    a {
+      padding: 0px 3px;
+      font-size: 24px;
+      transition: 0.2s padding;
+    }
+
+    a:hover {
+      padding: 3px 3px;
+      box-shadow: tomato 0px 0px 2px;
+      background: tomato;
+      color: white;
+      border-radius: 3px;
+    }
+
+    p {
+      padding-left: 5px;
+      font-size: 18px;
+      color: dimgray;
+    }
+  }
 }
 
 footer {
   @include bar(12px);
-  font-size: 22px;
+  font-size: 24px;
 
   position: fixed;
   bottom: 0px;
@@ -37,6 +86,11 @@ footer {
     li {
       display: inline-block;
       margin: 0px 10px;
+
+      a:hover {
+        transition: 0.2s font-size;
+        font-size: 26px;
+      }
     }
   }
 }
